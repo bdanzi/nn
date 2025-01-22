@@ -17,3 +17,7 @@ Here I'm adding the versions of the different packages needed to run the macro:
 * python: 3.12.8
 
 A cmsenv or a source of `/cvmfs/sft.cern.ch/lcg/views/LCG_105/x86_64-el9-gcc11-opt/setup.sh` should be enough if the versions are correct.
+
+
+###For v2 SingleH and VH DNNs
+In order to run the SingleH DNN in v2, the VH DNN must first be run, with the scores added as input for the SingleH DNN. Depending on if you are running with(out) the mvaIDs or mbb as inputs, the hyperparameters and training variables yaml files will be inacurate. All that would need to change is (un)commenting those variables in variables_train*.yaml and the n_input entry in hps*.yaml. 
