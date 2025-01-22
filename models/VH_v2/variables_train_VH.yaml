@@ -1,0 +1,49 @@
+HHbbggCandidate_pt:
+HHbbggCandidate_eta:
+HHbbggCandidate_phi:
+CosThetaStar_CS:
+CosThetaStar_gg:
+CosThetaStar_jj:
+DeltaR_j1g1:
+DeltaR_j2g1:
+DeltaR_j1g2:
+DeltaR_j2g2:
+DeltaR_jg_min:
+lead_eta:
+lead_pt:
+# lead_mvaID:
+sublead_eta:
+# sublead_mvaID:
+sublead_pt:
+lead_bjet_pt:
+lead_bjet_eta:
+lead_bjet_btagPNetB:
+sublead_bjet_pt:
+sublead_bjet_eta:
+sublead_bjet_btagPNetB:
+dijet_mass:
+dijet_pt:
+dijet_eta:
+pt:
+eta:
+puppiMET_pt:
+puppiMET_sumEt:
+gg_pT_OverHHcand_mass:
+jj_pT_OverHHcand_mass:
+lead_g_pT_OverHggcand_mass:
+lead_j_pT_OverHbbcand_mass:
+sublead_g_pT_OverHggcand_mass:
+sublead_j_pT_OverHbbcand_mass:
+n_fatjets:
+n_leptons:
+n_jets:
+
+lead_hoe:
+sublead_hoe:
+nBTight:
+nBMedium:
+nBLoose:
+# chi_t0:
+# chi_t1:
+DeltaPhi_j1MET:
+DeltaPhi_j2MET:
