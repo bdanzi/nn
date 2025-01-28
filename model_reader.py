@@ -25,6 +25,7 @@ parser.add_argument("--model", help="model directory, .keras only supported", ty
 parser.add_argument("--pq_file", help="input pq file, with relative path", type=str, required=True)
 parser.add_argument("--column_name", help="name of the output column of the pq file", type=str, required=False)
 parser.add_argument("--pq_file_output", help="name of the output pq file", type=str, required=False)
+parser.add_argument("--variablesYaml",help="input yaml file", type=str, required=True)
 args = parser.parse_args()
 
 # Ensure model directory exists
@@ -33,13 +34,11 @@ if not os.path.isdir(model_dir):
     raise FileNotFoundError(f"Model directory '{model_dir}' does not exist.")
 
 # Search for YAML and .keras files in the model directory
-parent_dir = os.path.dirname(model_dir)
-print(parent_dir)
-yaml_files = [f for f in os.listdir(parent_dir) if f.endswith(".yaml") and 'variables_train' in f]
+#yaml_files = [f for f in os.listdir(model_dir) if f.endswith(".yaml") and args.variablesYaml in f]
 mod_files = [f for f in os.listdir(model_dir) if f.endswith(".keras")]
-print(yaml_files)
-if not yaml_files or len(yaml_files) > 1:
-    raise FileNotFoundError("No YAML file found or too many YAML files in the model directory.")
+#print(yaml_files)
+#if not yaml_files or len(yaml_files) > 1:
+#    raise FileNotFoundError("No YAML file found or too many YAML files in the model directory.")
 if not mod_files or len(mod_files) > 1:
     raise FileNotFoundError("No .keras file found or too many .keras files in the model directory.")
 
@@ -47,8 +46,9 @@ if not mod_files or len(mod_files) > 1:
 model_path = os.path.join(model_dir, mod_files[0])
 print(f"Loading model from: {model_path}")
 model = tf.keras.models.load_model(model_path)
+variables_file = os.path.join(args.variablesYaml)
 
-variables_file = os.path.join(parent_dir, yaml_files[0])
+#variables_file = os.path.join(parent_dir, yaml_files[0])
 variables = load_yaml(variables_file)
 print(f"Loaded variables from: {variables_file}")
 
