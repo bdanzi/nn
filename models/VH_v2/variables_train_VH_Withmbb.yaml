@@ -11,9 +11,9 @@ DeltaR_j2g2:
 DeltaR_jg_min:
 lead_eta:
 lead_pt:
-#lead_mvaID:
+lead_mvaID:
 sublead_eta:
-#sublead_mvaID:
+sublead_mvaID:
 sublead_pt:
 lead_bjet_pt:
 lead_bjet_eta:
@@ -21,7 +21,7 @@ lead_bjet_btagPNetB:
 sublead_bjet_pt:
 sublead_bjet_eta:
 sublead_bjet_btagPNetB:
-#dijet_mass:
+dijet_mass:
 dijet_pt:
 dijet_eta:
 pt:
@@ -47,4 +47,3 @@ nBLoose:
 # chi_t1:
 DeltaPhi_j1MET:
 DeltaPhi_j2MET:
-VH_score:
