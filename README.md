@@ -4,7 +4,8 @@ It takes the following arguments:
 * pq_file: parquet file name and path
 * column_name: this is optional, is the name of the column with the new model, if not specified the new model will be called 'new_model'
 * pq_file_output: this is optional, if specified it will save the output in a new pq file
-
+* variablesYaml: since training can have different yaml as input, give explicitely the yaml file position
+  
 Two bash codes were added to run on trainings having or not the mbb and mva IDs as features.
 Firstly run the VH prediction model:
 `predict_VH_score.sh`
@@ -13,7 +14,13 @@ Then the Single Higgs one:
 `bash predict_SingleHiggsScore.sh`
 `bash predict_SingleHiggsScore_nombb.sh`
 
-Here I'm adding the versions of the different packages needed to run the macro:
+Here I'm adding the versions of the different packages needed to run the macro.
+Currently tested and working on lxplus:
+`
+conda create --name my_env python=3.12.8 pyyaml=6.0.2 tensorflow=2.16.1 pandas=2.2.3 pyarrow=18.1.0 -y
+conda activate my_env
+`
+Original instructions were requesting:
 * yaml: 6.0.2
 * tensorflow: 2.16.1
 * pandas: 2.2.3
